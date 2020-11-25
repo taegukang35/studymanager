@@ -20,7 +20,7 @@ void loop() {
 
   cm_1 = microsecondsToCentimeters(duration1);
   Serial.print(cm_1);
-  //Serial.print(" ");
+  Serial.print(" ");
   //Serial.print("cm_1");
   //Serial.println();
 
