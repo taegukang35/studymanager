@@ -1,13 +1,20 @@
 const int pingPin1 = 11;
 const int pingPin2 = 12;
 const int pingPin3 = 13;
+long duration1,cm_1;
+long duration2,cm_2;
+long duration3,cm_3;
 
 void setup() {
   Serial.begin(9600);
 }
 
 void loop() {
-  long duration1,cm_1;
+  start_detect();
+  delay(1000);
+}
+
+void start_detect(){
   pinMode(pingPin1, OUTPUT);
   digitalWrite(pingPin1, LOW);
   delayMicroseconds(2);
@@ -24,8 +31,6 @@ void loop() {
   //Serial.print("cm_1");
   //Serial.println();
 
-      
-  long duration2,cm_2;
   pinMode(pingPin2, OUTPUT);
   digitalWrite(pingPin2, LOW);
   delayMicroseconds(2);
@@ -43,7 +48,6 @@ void loop() {
   //Serial.println();
 
   
-  long duration3,cm_3;
   pinMode(pingPin3, OUTPUT);
   digitalWrite(pingPin3, LOW);
   delayMicroseconds(2);
@@ -59,8 +63,8 @@ void loop() {
   //Serial.print("cm_3");
   Serial.println();
 
-  delay(1000*60*10);
 }
+
 long microsecondsToCentimeters(long microseconds) {
   return microseconds / 29 / 2;
 }
