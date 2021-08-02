@@ -5,8 +5,8 @@ import serial
 arduino = serial.Serial('COM9',9600)
 # twilio API 이용
 
-account_sid = 'AC53799d614439f810795a695bf5b980c9'
-auth_token = '856449ef721d23737626dc30f15e45ce'
+account_sid = ''
+auth_token = ''
 client = Client(account_sid, auth_token)
 
 while True:
@@ -26,7 +26,7 @@ while True:
             .create(
             body="강태구 학생 학습실로 복귀해주세요.",
             from_='+12057404689',
-            to='+821093335418'
+            to=''
         )
         print("message sent")
     if Student[1] > 100:
@@ -34,7 +34,7 @@ while True:
             .create(
             body="허세환 학생 학습실로 복귀해주세요.",
             from_='+12057404689',
-            to='+821021139648'
+            to=''
         )
         print("message sent")
     if Student[2] > 100:
@@ -42,7 +42,7 @@ while True:
             .create(
             body="김송희 학생 학습실로 복귀해주세요.",
             from_='+12057404689',
-            to='+821037852146'
+            to=''
         )
         print("message sent")
     time.sleep(10*60) # 10분 동안 멈춤.
